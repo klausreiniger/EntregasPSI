@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Modelo.Cadastros;
+using Modelo.Tabelas;
+
 
 namespace Modelo.Tabelas
 {
@@ -10,5 +12,7 @@ namespace Modelo.Tabelas
     {
         public long CategoriaId { get; set; }
         public string Nome { get; set; }
+
+        public virtual ICollection<Produto> Produtos { get; set; }
     }
 }
