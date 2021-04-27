@@ -8,7 +8,7 @@ using System.Data.Entity;
 using Servico.Tabelas;
 using Modelo.Tabelas;
 
-namespace ExemploAula01.Controllers
+namespace ExemploAula01.Areas.Tabelas.Controllers
 {
     public class CategoriasController : Controller
     {

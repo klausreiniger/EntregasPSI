@@ -11,12 +11,12 @@
             Registro de um NOVO PRODUTO
         </div>
         <div class="panel-body">
-            @Html.Partial("~/Views/Produtos/_PartialEditContentPanel.cshtml", Model)
+            @Html.Partial("~Areas/Cadastros/Views/Produtos/_PartialEditContentPanel.cshtml", Model)
             <div class="panel-footer panel-info">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Adicionar Produto" class="btn btn-danger" />
                     @Html.ActionLink("Retornar para a listagem de PRODUTOS", "Index", null,
-                    new { @class = "btn btn-warning" })
+                    new { Area = "Cadastros", @class = "btn btn-warning" })
                 </div>
                 <br />
                 <br />

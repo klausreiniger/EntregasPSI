@@ -11,7 +11,7 @@ using Modelo.Tabelas;
 using Servico.Cadastros;
 using Servico.Tabelas;
 
-namespace ExemploAula01.Controllers
+namespace ExemploAula01.Areas.Cadastros.Controllers
 {
     public class ProdutosController : Controller
     {
@@ -45,6 +45,7 @@ namespace ExemploAula01.Controllers
                 produtoServico.GravarProduto(produto);
                 return RedirectToAction("Index");
             }
+            PopularViewBag(produto);
             return View(produto);
         }
         catch {

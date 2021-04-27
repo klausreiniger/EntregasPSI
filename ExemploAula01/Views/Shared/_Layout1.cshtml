@@ -23,13 +23,13 @@
                 <ul class="nav nav-pills nav-stacked">
                     <li id="liHome" role="presentation" class="active"><a href="#">Home</a></li>
                     <li id="liCategorias" role="presentation">
-                        @Html.ActionLink("Categorias", "Index", "Categorias")
+                        @Html.ActionLink("Categorias", "Index", "Categorias", new { Area = "Tabelas"}, null)
                     </li>
                     <li id="liFabricantes" role="presentation">
-                        @Html.ActionLink("Fabricantes", "Index", "Fabricantes")
+                        @Html.ActionLink("Fabricantes", "Index", "Fabricantes", new { Area = "Cadastros" }, null)
                     </li>
                     <li id="liProdutos" role="presentation">
-                        @Html.ActionLink("Produtos","Index","Produtos")
+                        @Html.ActionLink("Produtos", "Index", "Produtos", new { Area = "Cadastros" }, null)
                     </li>
                 </ul>
             </div>
@@ -46,6 +46,10 @@
     </div>
     <script src="@Url.Content("~/scripts/jquery-1.10.2.js")"></script>
     <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")">
+    </script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")">
+    </script>
     @RenderSection("ScriptPage", false)
 </body>
 </html>

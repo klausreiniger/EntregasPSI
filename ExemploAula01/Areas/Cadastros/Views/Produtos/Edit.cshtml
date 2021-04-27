@@ -1,25 +1,22 @@
 ﻿@model Modelo.Cadastros.Produto
 @{
     Layout = "~/Views/Shared/_Layout1.cshtml";
-    ViewBag.Title = "Registrando um NOVO PRODUTO";
+    ViewBag.Title = "Visualizando os dados de um PRODUTO";
 }
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     <div class="panel panel-primary">
         <div class="panel-heading">
-            Registro de um NOVO PRODUTO
+            Alteração dos dados de um PRODUTO
         </div>
         <div class="panel-body">
-            @Html.Partial("~/Views/Produtos/_PartialEditContentPanel.cshtml", Model)
-            <div class="panel-footer panel-info">
+            @Html.Partial("~Areas/Cadastros/Views/Produtos/_PartialEditContentPanel.cshtml", Model)
+            <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Adicionar Produto" class="btn btn-danger" />
-                    @Html.ActionLink("Retornar para a listagem de PRODUTOS", "Index", null,
-                    new { @class = "btn btn-warning" })
+                    <input type="submit" value="Gravar alterações" class="btn btn-default" />
                 </div>
-                <br />
-                <br />
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@ using System.Data.Entity;
 using Modelo.Cadastros;
 using Servico.Cadastros;
 
-namespace ExemploAula01.Controllers
+namespace ExemploAula01.Areas.Cadastros.Controllers
 {
     public class FabricantesController : Controller
     {
