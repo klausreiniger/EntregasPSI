@@ -129,5 +129,21 @@ namespace ExemploAula01.Areas.Seguranca.Controllers
                 return HttpNotFound();
             }
         }
+        public ActionResult Details(string id) {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Usuario usuario = GerenciadorUsuario.FindById(id);
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+            var uvm = new UsuarioViewModel();
+            uvm.Id = usuario.Id;
+            uvm.Nome = usuario.UserName;
+            uvm.Email = usuario.Email;
+            return View(uvm);
+        }
     }
 }
